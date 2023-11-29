@@ -166,7 +166,7 @@ main .contenitore {
 
 .list-contact {
   max-height: 728px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .list-contact li {
