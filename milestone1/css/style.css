@@ -40,3 +40,25 @@ main {
   background-color: white;
   height: calc(100vh - 35px);
 }
+
+/* contenitore main */
+
+main .contenitore {
+  display: flex;
+  height: 100%;
+}
+/* contenitore main */
+
+/* col contenitore main */
+.col-1 {
+  width: 30%;
+  /* !debug */
+  background-color: blue;
+}
+.col-2 {
+  width: 70%;
+  /* !debug */
+  background-color: red;
+}
+
+/* col contenitore main */
