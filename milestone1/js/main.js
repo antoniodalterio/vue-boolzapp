@@ -167,6 +167,11 @@ createApp({
           ],
         },
       ],
+
+      me: {
+        name: "Antonio D'Alterio",
+        avatar: 'img/antonio-dalterio.jpg',
+      },
     };
   },
 }).mount('#app');

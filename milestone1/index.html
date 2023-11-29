@@ -44,12 +44,12 @@
                 <div class="profile ad-flex">
                   <!-- img -->
                   <img
-                    src="img/avatar_io.jpg"
+                    :src="me.avatar"
                     alt="foto-profilo"
                     class="img-profile"
                   />
                   <!-- Nome profilo -->
-                  <p>Nome Utente</p>
+                  <p>{{me.name}}</p>
                 </div>
                 <!-- contenitore profilo -->
 
@@ -114,12 +114,12 @@
                 <div class="profile ad-flex">
                   <!-- img -->
                   <img
-                    src="img/avatar_1.jpg"
+                    :src="contacts[0].avatar"
                     alt="foto-profilo"
                     class="img-profile"
                   />
                   <!-- Nome profilo -->
-                  <p>Nome Utente</p>
+                  <p>{{contacts[0].name}}</p>
                 </div>
                 <!-- contenitore profilo -->
 
@@ -134,7 +134,15 @@
               <!-- header col-2 -->
 
               <!-- main col-2 -->
-              <div class="main-2"></div>
+              <div class="main-2">
+                <div class="container-col-2 ad-flex">
+                  <div class="box received"></div>
+                  <div class="box sent"></div>
+                  <div class="box sent"></div>
+                  <div class="box received"></div>
+                  <div class="box received"></div>
+                </div>
+              </div>
               <!-- main col-2 -->
 
               <!-- footer col-2 -->

@@ -3,3 +3,30 @@
 COMPONENTS
 *****************
 */
+
+.container-col-2 {
+  width: 90%;
+  margin: 40px auto;
+
+  height: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container-col-2 .box {
+  padding: 15px;
+  width: 16.5rem;
+  border-radius: 5px;
+
+  /* !debug */
+  height: 50px;
+}
+
+.received {
+  background-color: #d5f9ba;
+  align-self: flex-end;
+}
+
+.sent {
+  background-color: white;
+}
