@@ -5,7 +5,6 @@
 RESET
 ********
 */
-
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +43,6 @@ main {
 /* contenitore main */
 
 main .contenitore {
-  display: flex;
   height: 100%;
 }
 /* contenitore main */
@@ -68,8 +66,7 @@ main .contenitore {
 .header-col {
   height: 4.375rem;
   background-color: #eaeaea;
-  padding: 10px 15px;
-  display: flex;
+  padding: 10px 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -77,7 +74,6 @@ main .contenitore {
 /* contenuto header col */
 
 .profile {
-  display: flex;
   align-items: center;
 }
 .img-profile {
@@ -93,8 +89,66 @@ main .contenitore {
 }
 
 .icon {
-  display: flex;
-  gap: 17px;
   font-size: 20px;
-  color: #b1b1b1;
+}
+
+.icon i {
+  margin-right: 20px;
+}
+
+/* sezione notifiche */
+
+.notifiche {
+  padding: 15px 30px;
+  background-color: #8edafc;
+  align-items: center;
+}
+
+.icon-notifica {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: 10px;
+  border-radius: 100%;
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+}
+
+.icon-notifica i {
+  font-size: 20px;
+  color: #8edafc;
+}
+
+.notifiche a {
+  font-size: 14px;
+  color: #528ba9;
+}
+
+.notifiche p {
+  font-weight: 700;
+}
+
+/* sezione input-search */
+
+.container-input {
+  padding: 10px;
+  width: 100%;
+}
+
+.input-search {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.input-search i {
+  margin-right: 20px;
+}
+.input-search input {
+  width: 80%;
+  border: 0;
+  font-size: 16px;
+  outline: none;
 }

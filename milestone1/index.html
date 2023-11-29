@@ -28,48 +28,103 @@
     <!-- MY CSS -->
   </head>
   <body>
+    <!-- controllo vue -->
     <div id="app">
+      <!-- div per creare lo sfondo bicolore -->
       <div class="bicolor">
+        <!-- parte main del layout -->
         <main>
-          <div class="contenitore">
+          <!-- contenitore layout main -->
+          <div class="contenitore ad-flex">
+            <!-- colonna 1 -->
             <div class="col col-1">
-              <div class="header-col">
-                <div class="profile">
+              <!-- header col-1 -->
+              <div class="header-col ad-flex">
+                <!-- contenitore profilo -->
+                <div class="profile ad-flex">
+                  <!-- img -->
                   <img
                     src="img/avatar_io.jpg"
                     alt="foto-profilo"
                     class="img-profile"
                   />
+                  <!-- Nome profilo -->
                   <p>Nome Utente</p>
                 </div>
-                <div class="icon">
+                <!-- contenitore profilo -->
+
+                <!-- contenitore icone -->
+                <div class="icon ad-flex">
                   <i class="fa-solid fa-circle-notch"></i>
                   <i class="fa-solid fa-message"></i>
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
+                <!-- contenitore icone -->
               </div>
+              <!-- header col-1 -->
+
+              <!-- Sezione notifiche -->
+              <div class="notifiche ad-flex">
+                <div class="icon-notifica">
+                  <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div>
+                  <p>Ricevi notifiche di nuovi messaggi</p>
+                  <div><a href="#">Attiva le notifiche desktop</a></div>
+                </div>
+              </div>
+              <!-- Sezione notifiche -->
+
+              <!-- Sezione INPUT -->
+              <div class="container-input">
+                <div class="input-search ad-flex">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    placeholder="Cerca o inizia una nuova chat"
+                  />
+                </div>
+              </div>
+              <!-- Sezione INPUT -->
             </div>
+            <!-- colonna 1 -->
+
+            <!-- colonna 2 -->
             <div class="col col-2">
-              <div class="header-col">
-                <div class="profile">
+              <!-- header col-2 -->
+              <div class="header-col ad-flex">
+                <!-- contenitore profilo -->
+                <div class="profile ad-flex">
+                  <!-- img -->
                   <img
                     src="img/avatar_1.jpg"
                     alt="foto-profilo"
                     class="img-profile"
                   />
+                  <!-- Nome profilo -->
                   <p>Nome Utente</p>
                 </div>
-                <div class="icon">
+                <!-- contenitore profilo -->
+
+                <!-- contenitore icone -->
+                <div class="icon ad-flex">
                   <i class="fa-solid fa-magnifying-glass"></i>
                   <i class="fa-solid fa-paperclip"></i>
                   <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
+                <!-- contenitore icone -->
               </div>
+              <!-- header col-2 -->
             </div>
+            <!-- colonna 2 -->
           </div>
+          <!-- contenitore layout main -->
         </main>
+        <!-- parte main del layout -->
       </div>
+      <!-- div per creare lo sfondo bicolore -->
     </div>
+    <!-- controllo vue -->
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Vue.js -->
