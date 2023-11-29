@@ -5,10 +5,15 @@
 RESET
 ********
 */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
 }
 
 /* 
@@ -50,9 +55,11 @@ main .contenitore {
 /* col contenitore main */
 .col-1 {
   width: 30%;
+  height: 100%;
   border-right: 1.5px solid #cfccca;
+  overflow-y: hidden;
   /* !debug */
-  background-color: blue;
+  background-color: #faf6f6;
 }
 .col-2 {
   width: 70%;
@@ -65,7 +72,7 @@ main .contenitore {
 /* header col-1 col-2 */
 .header-col {
   height: 4.375rem;
-  background-color: #eaeaea;
+  background-color: #faf6f6;
   padding: 10px 10px;
   justify-content: space-between;
   align-items: center;
@@ -151,4 +158,21 @@ main .contenitore {
   border: 0;
   font-size: 16px;
   outline: none;
+}
+
+/* Sezione lista contatti */
+
+.list-contact {
+  max-height: 728px;
+  overflow-y: scroll;
+}
+
+.list-contact li {
+  padding: 15px 30px;
+  background-color: white;
+  margin-bottom: 2px;
+}
+
+.list-contact .profile {
+  align-items: start;
 }
