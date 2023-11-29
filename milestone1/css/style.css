@@ -1,5 +1,16 @@
 @import './_partyal/componet.css';
 @import './_partyal/common.css';
+/* 
+*******
+RESET
+********
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* 
 *******
@@ -7,8 +18,25 @@ COLOR
 ********
 */
 
+body {
+  background-color: #dedbd2;
+}
+
+.bicolor {
+  height: 122px;
+  background-color: #009788;
+  padding: 20px;
+}
+
 /* 
 *******
-HEADER
+MAIN
 ********
 */
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  height: calc(100vh - 35px);
+}
