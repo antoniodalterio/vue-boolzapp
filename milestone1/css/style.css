@@ -52,6 +52,7 @@ main .contenitore {
 /* col contenitore main */
 .col-1 {
   width: 30%;
+  border-right: 1.5px solid #cfccca;
   /* !debug */
   background-color: blue;
 }
@@ -62,3 +63,38 @@ main .contenitore {
 }
 
 /* col contenitore main */
+
+/* header col-1 col-2 */
+.header-col {
+  height: 4.375rem;
+  background-color: #eaeaea;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* contenuto header col */
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+.img-profile {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: 10px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.profile p {
+  font-weight: 700;
+}
+
+.icon {
+  display: flex;
+  gap: 17px;
+  font-size: 20px;
+  color: #b1b1b1;
+}
