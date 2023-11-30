@@ -174,11 +174,23 @@ createApp({
       },
 
       currentChat: 0,
+
+      newMessage: '',
     };
   },
   methods: {
     selectChat(index) {
       this.currentChat = index;
+    },
+
+    sendMessage() {
+      if (this.newMessage.trim() !== '') {
+        this.contacts[this.currentChat].messages.push({
+          message: this.newMessage,
+          status: 'sent',
+        });
+        this.newMessage = '';
+      }
     },
   },
 }).mount('#app');

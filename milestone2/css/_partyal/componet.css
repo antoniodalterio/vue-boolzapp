@@ -7,7 +7,6 @@ COMPONENTS
 .container-col-2 {
   width: 90%;
   margin: 20px auto;
-
   height: 90%;
   flex-direction: column;
   gap: 10px;

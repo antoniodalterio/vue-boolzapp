@@ -140,9 +140,8 @@
                   class="box"
                   v-for="(messageText, index) in contacts[currentChat].messages"
                   :class="messageText.status === 'received' ? 'received' : 'sent' "
-                >
-                  <p>{{messageText.message}}</p>
-                </div>
+                  v-text="messageText.message"
+                ></div>
               </div>
             </div>
             <!-- main col-2 -->
@@ -152,7 +151,12 @@
               <i class="fa-regular fa-face-smile"></i>
               <div class="container-input">
                 <div class="input-search ad-flex">
-                  <input type="text" placeholder="Scrivi un messaggio..." />
+                  <input
+                    type="text"
+                    placeholder="Scrivi un messaggio..."
+                    @keyup.enter="sendMessage"
+                    v-model="newMessage"
+                  />
                 </div>
               </div>
               <i class="fa-solid fa-microphone"></i>
