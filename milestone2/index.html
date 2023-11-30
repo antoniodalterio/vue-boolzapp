@@ -136,7 +136,13 @@
             <!-- main col-2 -->
             <div class="main-2">
               <div class="container-col-2 ad-flex">
-                <div class="box"></div>
+                <div
+                  class="box"
+                  v-for="(messageText, index) in contacts[currentChat].messages"
+                  :class="messageText.status === 'received' ? 'received' : 'sent' "
+                >
+                  <p>{{messageText.message}}</p>
+                </div>
               </div>
             </div>
             <!-- main col-2 -->
