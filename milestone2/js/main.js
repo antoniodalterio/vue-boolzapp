@@ -189,8 +189,17 @@ createApp({
           message: this.newMessage,
           status: 'sent',
         });
+        this.receivedMessage();
         this.newMessage = '';
       }
+    },
+    receivedMessage() {
+      setTimeout(() => {
+        this.contacts[this.currentChat].messages.push({
+          message: '\uD83D\uDC4D',
+          status: 'received',
+        });
+      }, 1000);
     },
   },
 }).mount('#app');
