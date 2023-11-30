@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolzapp</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font Awesome -->
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Google -->
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- MY CSS -->
+  </head>
+  <body>
+    <!-- controllo vue -->
+    <div id="app">
+      <!-- div per creare lo sfondo bicolore -->
+
+      <!-- parte main del layout -->
+      <main>
+        <!-- contenitore layout main -->
+        <div class="contenitore ad-flex">
+          <!-- colonna 1 -->
+          <div class="col col-1 ad-flex">
+            <!-- header col-1 -->
+            <div class="header-col ad-flex">
+              <!-- contenitore profilo -->
+              <div class="profile ad-flex">
+                <!-- img -->
+                <img :src="me.avatar" alt="foto-profilo" class="img-profile" />
+                <!-- Nome profilo -->
+                <p>{{me.name}}</p>
+              </div>
+              <!-- contenitore profilo -->
+
+              <!-- contenitore icone -->
+              <div class="icon ad-flex">
+                <i class="fa-solid fa-circle-notch"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+              <!-- contenitore icone -->
+            </div>
+            <!-- header col-1 -->
+
+            <!-- Sezione notifiche -->
+            <div class="notifiche ad-flex">
+              <div class="icon-notifica">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
+              <div>
+                <p>Ricevi notifiche di nuovi messaggi</p>
+                <div><a href="#">Attiva le notifiche desktop</a></div>
+              </div>
+            </div>
+            <!-- Sezione notifiche -->
+
+            <!-- Sezione INPUT -->
+            <div class="container-input">
+              <div class="input-search ad-flex">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  placeholder="Cerca o inizia una nuova chat"
+                />
+              </div>
+            </div>
+            <!-- Sezione INPUT -->
+
+            <!-- Sezione Contatti -->
+            <ul class="list-contact">
+              <li
+                v-for="(user, index) in contacts"
+                :class="{ active: index === currentChat }"
+                @click="selectChat(index)"
+              >
+                <div class="profile ad-flex">
+                  <!-- img -->
+                  <img
+                    :src="user.avatar"
+                    alt="foto-profilo"
+                    class="img-profile"
+                  />
+                  <!-- Nome profilo -->
+                  <p>{{user.name}}</p>
+                </div>
+              </li>
+            </ul>
+            <!-- Sezione Contatti -->
+          </div>
+          <!-- colonna 1 -->
+
+          <!-- colonna 2 -->
+          <div class="col col-2">
+            <!-- header col-2 -->
+            <div class="header-col ad-flex">
+              <!-- contenitore profilo -->
+              <div class="profile ad-flex">
+                <!-- img -->
+                <img
+                  :src="contacts[currentChat].avatar"
+                  alt="foto-profilo"
+                  class="img-profile"
+                />
+                <!-- Nome profilo -->
+                <p>{{contacts[currentChat].name}}</p>
+              </div>
+              <!-- contenitore profilo -->
+
+              <!-- contenitore icone -->
+              <div class="icon ad-flex">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+              <!-- contenitore icone -->
+            </div>
+            <!-- header col-2 -->
+
+            <!-- main col-2 -->
+            <div class="main-2">
+              <div class="container-col-2 ad-flex">
+                <div class="box"></div>
+              </div>
+            </div>
+            <!-- main col-2 -->
+
+            <!-- footer col-2 -->
+            <div class="footer ad-flex">
+              <i class="fa-regular fa-face-smile"></i>
+              <div class="container-input">
+                <div class="input-search ad-flex">
+                  <input type="text" placeholder="Scrivi un messaggio..." />
+                </div>
+              </div>
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+            <!-- footer col-2 -->
+          </div>
+          <!-- colonna 2 -->
+        </div>
+        <!-- contenitore layout main -->
+      </main>
+      <!-- parte main del layout -->
+
+      <!-- div per creare lo sfondo bicolore -->
+    </div>
+    <!-- controllo vue -->
+    <!-- Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Vue.js -->
+
+    <!-- My js -->
+    <script src="js/main.js"></script>
+    <!-- My js -->
+  </body>
+</html>
