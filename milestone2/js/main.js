@@ -176,6 +176,8 @@ createApp({
       currentChat: 0,
 
       newMessage: '',
+
+      keyWord: '',
     };
   },
   methods: {
@@ -200,6 +202,12 @@ createApp({
           status: 'received',
         });
       }, 1000);
+    },
+
+    searchContacts() {
+      return this.contacts.filter((user) => {
+        return user.name.toLowerCase().includes(this.keyWord.toLowerCase());
+      });
     },
   },
 }).mount('#app');

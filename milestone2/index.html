@@ -78,6 +78,7 @@
                 <input
                   type="text"
                   placeholder="Cerca o inizia una nuova chat"
+                  v-model="keyWord"
                 />
               </div>
             </div>
@@ -86,7 +87,7 @@
             <!-- Sezione Contatti -->
             <ul class="list-contact">
               <li
-                v-for="(user, index) in contacts"
+                v-for="(user, index) in searchContacts()"
                 :class="{ active: index === currentChat }"
                 @click="selectChat(index)"
               >
