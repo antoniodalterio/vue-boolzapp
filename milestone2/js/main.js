@@ -182,7 +182,14 @@ createApp({
   },
   methods: {
     selectChat(index) {
-      this.currentChat = index;
+      const filterArray = this.searchContacts();
+      const selectUsers = filterArray[index];
+      console.log(selectUsers);
+      const getIndex = this.contacts.indexOf(selectUsers);
+      console.log(getIndex);
+      if (getIndex !== -1) {
+        this.currentChat = getIndex;
+      }
     },
 
     sendMessage() {
